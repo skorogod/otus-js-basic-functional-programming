@@ -1,7 +1,10 @@
 import { spiral } from "./spiral";
 
 describe("spiral", () => {
-    it("test", () => {
+    it("spiral is a function",()=> {
+        expect(spiral).toBeInstanceOf(Function);
+    })
+    it("matrix spiral reverse", () => {
         expect(spiral([
             [0, 1, 2, 3, 4],
             [5, 6, 7, 8, 9],

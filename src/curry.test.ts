@@ -1,4 +1,4 @@
-const { curry } = require("./curry")
+import { curry } from "./curry";
 
 let sum: Function;
 let hof: Function;

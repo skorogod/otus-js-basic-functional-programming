@@ -1,5 +1,5 @@
-export function spiral(arr:Array<Array<any>>) {
-    let h = arr.length;
+export function spiral(arr:Array<Array<number>>) {
+    const h = arr.length;
     let w = 0;
     
     arr.forEach(arr2 => {
@@ -8,7 +8,7 @@ export function spiral(arr:Array<Array<any>>) {
         }
     })
 
-    let result = new Array();
+    const result = [];
     let startCol =0;
     let endCol = w-1;
     let startRow = 0;

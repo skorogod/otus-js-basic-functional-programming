@@ -1,6 +1,8 @@
 export function sum(a: number) {
 
-    a = a || 0;
+    if(!a) {
+        a = 0;
+    }
 
     function f (n) {
         return sum(a+n)

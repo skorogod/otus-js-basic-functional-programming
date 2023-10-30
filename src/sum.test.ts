@@ -6,14 +6,11 @@ import { sum } from "./sum";
 
 beforeEach(() => {
     jest.clearAllMocks();
-    const alertSpy = jest.spyOn(global, 'alert');
 })
 
 
 describe("sum", () => {
-    window.alert = jest.fn().mockImplementation((f) => {
-        return f.toString();
-    });
+    window.alert = jest.fn().mockImplementation((f) => f.toString());
     it("sum is a function", () => {
         expect(sum).toBeInstanceOf(Function);
     });

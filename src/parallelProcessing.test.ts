@@ -1,7 +1,7 @@
-import { Parallel } from "./parallelProcessing";
-import { job } from "./parallelProcessing";
-
 import { waitFor } from "@testing-library/react";
+import { Parallel , job } from "./parallelProcessing";
+
+
 
 describe("parallel", () => {
     const logSpy = jest.spyOn(console, "log");
@@ -21,7 +21,7 @@ describe("parallel", () => {
         await runner.jobs(...jobs);
 
         waitFor(() => {
-            expect(logSpy).toBeCalledWith("[1, 3, 2, 4, 5]")
+            expect(logSpy).toHaveBeenCalledWith("[1, 3, 2, 4, 5]")
         })
     })
 })

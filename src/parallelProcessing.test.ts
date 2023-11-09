@@ -1,4 +1,3 @@
-import { waitFor } from "@testing-library/react";
 import { Parallel , job } from "./parallelProcessing";
 
 
@@ -18,10 +17,9 @@ describe("parallel", () => {
                 () => new Promise((resolve) => setTimeout(resolve, i*10, i))
             )
         }
-        await runner.jobs(...jobs);
+        
+        console.log(await runner.jobs(...jobs));
 
-        waitFor(() => {
-            expect(logSpy).toHaveBeenCalledWith("[1, 3, 2, 4, 5]")
-        })
+        expect(logSpy).toHaveBeenCalledWith([1,2,3,4,5])
     })
 })

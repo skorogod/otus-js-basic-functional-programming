@@ -39,6 +39,5 @@ export function spiral(arr:Array<Array<number>>) {
 
         startCol ++;
     }
-    console.log(result);
     return result;
 }
